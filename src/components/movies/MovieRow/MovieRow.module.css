@@ -1,0 +1,61 @@
+.rowSection {
+    width: 100%;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 5;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    /* Match hero padding? */
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: white;
+    white-space: nowrap;
+    /* Remove old border left */
+}
+
+/* Red Line Separator */
+.header::after {
+    content: '';
+    height: 2px;
+    flex: 1;
+    background: linear-gradient(90deg, #E50914 0%, transparent 100%);
+    opacity: 0.6;
+    margin-top: 4px;
+}
+
+.viewAll {
+    display: none;
+    /* Reference image doesn't show it, or keep it subtle? I'll hide for exact match request if needed, but let's keep it just in case, but maybe move it? keeping it is safer for UX. */
+}
+
+.carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 4rem 2rem 4rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    mask-image: linear-gradient(to right, transparent 0%, black 4rem, black calc(100% - 4rem), transparent 100%);
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.cardWrapper {
+    flex: 0 0 auto;
+    width: 300px;
+    /* Landscape Width */
+    scroll-snap-align: start;
+    perspective: 1000px;
+}

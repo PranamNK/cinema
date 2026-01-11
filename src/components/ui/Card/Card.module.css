@@ -1,0 +1,13 @@
+.card {
+    background-color: var(--color-bg-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-raised);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    overflow: hidden;
+    /* Ensure content obeys radius */
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}

@@ -1,0 +1,36 @@
+:root {
+  /* Colors - Deep Space & Glass */
+  --color-bg-primary: #050508;
+  /* Deepest black-blue */
+
+  --color-accent-primary: #E50914;
+  /* Red Glow */
+  --color-accent-secondary: #7A0C12;
+  /* Maroon */
+  --color-accent-glow: rgba(229, 9, 20, 0.5);
+
+  --color-text-primary: rgba(255, 255, 255, 0.95);
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+
+  /* Glass Tokens - Strengthened for Visibility */
+  --glass-card: rgba(255, 255, 255, 0.12);
+  /* Increased from 0.03 to 0.12 */
+  --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Increased from 0.08 to 0.2 */
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+  --backdrop-blur: blur(24px) saturate(200%);
+  /* Stronger blur */
+
+  /* Spacing & Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-spring: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
