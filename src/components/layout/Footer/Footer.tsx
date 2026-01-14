@@ -7,16 +7,14 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.row}>
-                    {/* Brand Column */}
                     <div className={styles.col}>
-                        <h3 className={styles.brand}>Cenima</h3>
+                        <h3 className={styles.brand}>CENIMA</h3>
                         <p className={styles.tagline}>
                             Your ultimate destination for cinematic discovery.
                             Curated lists, trending hits, and hidden gems.
                         </p>
                     </div>
 
-                    {/* Links Column */}
                     <div className={styles.col}>
                         <h4 className={styles.heading}>Explore</h4>
                         <ul className={styles.links}>
@@ -27,7 +25,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Legal/Info Column */}
                     <div className={styles.col}>
                         <h4 className={styles.heading}>Info</h4>
                         <ul className={styles.links}>
@@ -38,7 +35,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Socials Column */}
                     <div className={styles.col}>
                         <h4 className={styles.heading}>Connect</h4>
                         <div className={styles.socials}>

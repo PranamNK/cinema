@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/Navbar/Navbar";
 import { FavoritesProvider } from "@/context/FavoritesContext";
 
 export const metadata: Metadata = {
-  title: "Neumorphic Movie App",
+  title: "CENIMA",
   description: "Premium cinematic movie discovery experience.",
 };
 
