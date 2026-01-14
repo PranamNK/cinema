@@ -13,7 +13,20 @@ export default function FilterBar({ selectedGenre, onSelectGenre }: FilterBarPro
     const [genres, setGenres] = useState<Genre[]>([]);
 
     useEffect(() => {
-        getGenres().then(res => setGenres(res.genres));
+        const fetchGenres = async () => {
+            try {
+                const res = await getGenres();
+                console.log("FilterBar fetched genres:", res);
+                if (res && res.genres) {
+                    setGenres(res.genres);
+                } else {
+                    console.error("FilterBar: No genres found in response", res);
+                }
+            } catch (err) {
+                console.error("FilterBar: Failed to fetch genres", err);
+            }
+        };
+        fetchGenres();
     }, []);
 
     return (

@@ -15,7 +15,6 @@ export default function ReviewSection({ movieId }: { movieId: number }) {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Zod Validation
         try {
             const ReviewSchema = z.object({
                 author: z.string().min(2, "Name too short").max(50, "Name too long"),
@@ -33,7 +32,7 @@ export default function ReviewSection({ movieId }: { movieId: number }) {
         if (!author.trim() || !content.trim()) return;
 
         addReview({
-            author, // React ensures basic XSS protection
+            author,
             content,
             rating,
         });
@@ -48,7 +47,7 @@ export default function ReviewSection({ movieId }: { movieId: number }) {
         <div className={styles.section}>
             <h3 className={styles.title}>User Reviews</h3>
 
-            {/* Collapsible Form */}
+
             {!isWriting ? (
                 <button
                     className={styles.writeReviewBtn}
@@ -111,7 +110,6 @@ export default function ReviewSection({ movieId }: { movieId: number }) {
                 </form>
             )}
 
-            {/* List */}
             <div className={styles.reviewsList}>
                 {reviews.length === 0 ? (
                     <p className={styles.empty}>No reviews yet. Be the first to add one!</p>

@@ -31,11 +31,18 @@ export default function VantaBackground() {
                     await loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js');
                 }
 
+                // Wait for THREE to be available
+                let attempts = 0;
+                while (!(window as any).THREE && attempts < 20) {
+                    await new Promise(r => setTimeout(r, 100));
+                    attempts++;
+                }
+
                 if (!(window as any).VANTA || !(window as any).VANTA.NET) {
                     await loadScript('https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js');
                 }
 
-                if ((window as any).VANTA && (window as any).VANTA.NET && vantaRef.current) {
+                if ((window as any).VANTA && (window as any).VANTA.NET && vantaRef.current && (window as any).THREE) {
                     const effect = (window as any).VANTA.NET({
                         el: vantaRef.current,
                         mouseControls: true,
@@ -59,7 +66,6 @@ export default function VantaBackground() {
             }
         };
 
-        // Small timeout to ensure DOM is ready? Not needed with useEffect but safety.
         initVanta();
 
         return () => {

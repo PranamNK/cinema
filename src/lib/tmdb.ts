@@ -16,9 +16,7 @@ export async function getMovieDetailsServer(id: string): Promise<Movie | null> {
         });
 
         if (!res.ok) {
-            console.error(`TMDB Error for ID ${id}: ${res.status} ${res.statusText}`);
-            const text = await res.text();
-            console.error('TMDB Error Body:', text);
+            console.error(`TMDB Error: ${res.status} ${res.statusText}`);
             return null;
         }
 
