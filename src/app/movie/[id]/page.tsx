@@ -15,11 +15,13 @@ export default async function Page({ params }: PageProps) {
         console.error(e);
     }
 
-    return (
-        <div style={{ textAlign: 'center', padding: '4rem' }}>
-            <h1>Movie Not Found</h1>
-        </div>
-    );
+    if (!movie) {
+        return (
+            <div style={{ textAlign: 'center', padding: '4rem' }}>
+                <h1>Movie Not Found</h1>
+            </div>
+        );
+    }
 
     return <MovieDetails movie={movie} />;
 }

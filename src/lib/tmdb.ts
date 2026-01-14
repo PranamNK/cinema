@@ -1,9 +1,9 @@
 import { Movie } from '@/types';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
-const API_KEY = process.env.TMDB_API_KEY || process.env.NEXT_PUBLIC_TMDB_API_KEY;
-
 export async function getMovieDetailsServer(id: string): Promise<Movie | null> {
+    const API_KEY = process.env.TMDB_API_KEY || process.env.NEXT_PUBLIC_TMDB_API_KEY;
+
     if (!API_KEY) {
         console.error('TMDB API Key missing on server');
         return null;

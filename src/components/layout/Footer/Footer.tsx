@@ -41,25 +41,26 @@ export default function Footer() {
                     {/* Socials Column */}
                     <div className={styles.col}>
                         <h4 className={styles.heading}>Connect</h4>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}><Twitter size={20} /></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}><Instagram size={20} /></a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}><Youtube size={20} /></a>
-                        <a href="https://github.com/PranamNK/cinema" target="_blank" rel="noopener noreferrer" className={styles.socialLink}><Github size={20} /></a>
-                    </div>
-                    <div className={styles.newsletter}>
-                        <p>Stay updated</p>
-                        <div className={styles.inputGroup}>
-                            <input type="email" placeholder="Email address" />
-                            <button><Mail size={16} /></button>
+                        <div className={styles.socials}>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}><Twitter size={20} /></a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}><Instagram size={20} /></a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}><Youtube size={20} /></a>
+                            <a href="https://github.com/PranamNK/cinema" target="_blank" rel="noopener noreferrer" className={styles.socialLink}><Github size={20} /></a>
+                        </div>
+                        <div className={styles.newsletter}>
+                            <p>Stay updated</p>
+                            <div className={styles.inputGroup}>
+                                <input type="email" placeholder="Email address" />
+                                <button><Mail size={16} /></button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div className={styles.bottom}>
-                <p>&copy; {new Date().getFullYear()} Cenima Movie App. All rights reserved.</p>
+                <div className={styles.bottom}>
+                    <p>&copy; {new Date().getFullYear()} Cenima Movie App. All rights reserved.</p>
+                </div>
             </div>
-        </div>
-        </footer >
+        </footer>
     );
 }
